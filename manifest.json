@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Place Cursor Extension",
+  "version": "1.0.0",
+  "description": "Places the cursor in a specific text box on a specific web page.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://my.server.domain/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Place Cursor"
+  }
+}
