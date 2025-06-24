@@ -1,23 +1,19 @@
 # PlaceCursor
 
-This is a basic JavaScript "Hello World" project. To run the project, use:
-
-```
-npm start
-```
+This is a basic JavaScript Chrome extension project that will place a cursor in a text box. 
 
 ## Project Structure
-- `index.js`: Main entry point, prints "Hello World" to the console.
-- `.github/copilot-instructions.md`: Copilot customization instructions.
+- `content.js`: Main entry point.
+- `background.js`: background.js is required for manifest v3 service worker, but not used in this simple extension.
+- `manifest.json`: Defines the extension structure for Chrome.  Go here and edit the applied domain found in the 'matches' clause before use. 
 
 ## Getting Started
-1. Install Node.js if you haven't already.
-2. Run `npm install` to install dependencies (none by default).
-3. Run `node index.js` to see the output.
+1. Clone the git or copy the files to a folder.
+2. Read the rest of this README.md file.
 
 # PlaceCursor Chrome Extension
 
-This Chrome extension automatically places the cursor in the first text box on a specific web page (default: https://example.com/). To target a different page or text box, update the `matches` field in `manifest.json` and the selector in `content.js`.
+This Chrome extension automatically places the cursor in the first text box on a specific web page. To target a different page or text box, update the `matches` field in `manifest.json` and the selector in `content.js`.
 
 ## Files
 - `manifest.json`: Chrome extension manifest (v3)
